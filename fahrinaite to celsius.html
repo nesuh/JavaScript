@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvertToFahrenheite to Celsius</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ConvertToFahrenheite and Celsius Equipment</h1>
+    Please insert the degree:<input id="num" type="number"><br>
+    plaese insert the unit:<input id="units" type="text"><br>
+    ConvertTo:<input id="unitsConvert" type="text"><br>
+    <button onclick="converter()">Change</button>
+    Result Is <h1 id="display"></h1>
+<script>
+   let Tcf= document.getElementById('num').value;
+   let unit=document.getElementById('units').value;
+   let unitConv=document.getElementById('unitsConvert').value;
+   let displayPage=document.getElementById('display');
+
+
+   function converter(Tcf){
+    // if(unit ==="C" && unitConv ==="F"){
+        let Tf= (Tcf*9/5)+32;
+        console.log(Tf);
+    // }else if(unit==="F" && unitConv === "C"){
+        let Tc =(Tcf-32)*5/9;
+        console.log(Tc);
+    // }
+   }
+ 
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

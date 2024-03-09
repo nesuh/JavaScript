@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable project</title>
+
+</head>
+<body>
+    <!-- it is used this project for cart increasing decreasing project  -->
+ <!-- <h4>Cart Quantity</h4>
+ <button onclick="show()">Show Quantity</button>  
+ <button onclick="add()" >Add to Cart</button>
+ <button onclick="incr2()">+2</button>
+ <button onclick="incr3()">+3</button>
+<button onclick="reset()" >Reset Cart</button> 
+
+<script>
+     let value=0;
+ 
+    function add(){
+        value++
+        console.log(`cart Quantity ${value}`);
+    }
+    function incr2(){
+        value+=2;
+        console.log(`cart Quantity ${value}`);
+    }
+    function incr3(){
+        value+=3;
+        console.log("cart Quantity"+value);
+    }
+    function reset(){
+        value=0;
+        console.log("cart Quantity"+value);
+    }
+    function show(){
+        let store=0;
+        console.log("all quatitys are"+value);
+    //    return  ( add()+incr2()+incr3()) ;
+        
+    } -->
+    <!-- // or we can ignore the function use only onclick events and insert the function values into onclick  -->
+
+    <!-- // question on the variable and solve it  -->
+<!-- 
+5a.create a <script></script> inside crate a variable called 'name ',and save your name in this variable (as a string)
+5b.continuing from 5a,display the message 'MY name is:${name}' in the console (insert the 'name' variable created in 5a into this message).
+5c.At a restaurant ,you order 1 coffee ($5),2 bagels ($3 each),and 1 soup($9).calculate the cost and save it in a variable called 'cost'
+5d.continuing from 5c,display 'cost of food:$${cost}'in the console 
+5e. Let's say the restaurant charges a 10% tax .using the 'cost ' variable from 5c,calculate the tax (hint:multiply by 0.1),and save the result in a variable. -->
+
+<h4>wellcome to anta caffe</h4>
+<p>order coffee</p><input type="number" id="coffee">
+<p>order bagels</p><input type="number" id="bagels">
+<p>order soup</p><input type="number" id="soup">
+<button onclick="cost()">Cost</button><input  type="text" id="display">
+<h1 id="totalCost"></h1>
+
+
+    <script>
+        // let name="antenhe sileshi"
+        // console.log(`my name is :${name}`)
+        // let coffee
+        // let bagels 
+        // let soup
+        function cost(){
+let coffeeValue=document.getElementById('coffee')
+let bagelsValue=document.getElementById('bagels')
+let soupValue=document.getElementById('soup')
+let cost=coffeeValue.value*5+bagelsValue.value*3+soupValue.value*9;
+let costTax=cost/10;
+let totalCost=cost+costTax;
+console.log(cost)
+document.getElementById('display').value=`cost of all foods are:${cost} and with tax is ${costTax}`;
+document.getElementById('totalCost').innerText=`Total Cost is bro ${totalCost}`
+        }
+</script>
+
+</body>
+</html>

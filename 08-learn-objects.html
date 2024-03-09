@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+<button onclick="playeGame('head');">Head</button>
+<button onclick="playeGame('tail');">Tail</button>
+<button onclick="
+score.wins=0;
+score.losses=0;
+localStorage.removeItem('score');">Reset Score</button>
+
+    <script>
+        let result=''
+        let txt=''
+        let guess=Math.random();
+        // const score={
+        //     wins:0,
+        //     losses:0
+        //  } this is if we null the browser
+        const score=JSON.parse(localStorage.getItem('score')) || {
+            wins:0,
+            losses:0
+        }
+        function guess1(){
+if(guess>=0 && guess<1/5){
+    result='head'
+}else if(guess>=1/5 && guess<1){
+    result='tail'
+}
+        }
+function playeGame(yours){
+    // const guessStore=guess();
+    guess1();
+if(yours===result){
+console.log('you win!')
+txt='you win!'
+}else{
+console.log('you loss!')
+txt='you loss!';
+}
+if(txt ==='you win!'){
+score.wins++
+}else if(txt==='you loss!'){
+score.losses++
+}
+localStorage.setItem('score',JSON.stringify(score))
+alert(`computer Select ${result} but you Select ${yours},${txt}
+win:${score.wins},losses:${score.losses}`)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     const product={
+// name:'socks',
+// price:20,
+// rates:{
+//     star:4.5,
+//     counts:67
+// }
+//     };  
+//    let changer=JSON.stringify(product)
+//    console.log(changer);
+//    console.log(JSON.parse(changer));
+//    product.age=20;
+//    console.log(product)
+
+    </script>
+</body>
+</html>

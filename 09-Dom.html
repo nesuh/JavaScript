@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Project</title>
+</head>
+<body>
+    <!-- project one  -->
+    <!-- <p>YouTube Subscribe Button</p>
+    <button onclick="bro()" class="btn">Subscribe</button> -->
+<!-- project two  -->
+<p>Amazonr Shipping Calculator</p>
+<p>Orders under $40 = +$10 shipping.</p>
+<p>Orders over $40 = FREE shipping</p>
+<input type="text" class="inputBox">
+<button onclick="calculate()" class="btn">Calculate</button>
+<p class="display"></p>
+    <script>
+        /*
+        function bro(){ 
+            document.querySelector('.btn').innerHTML="Subscribed";
+            console.log("button clicked");
+        }*/
+        
+
+        function calculate(){
+            const shipping= document.querySelector('.inputBox');
+        let cost =shipping.value; //cost is  an object type is string
+        // console.log(cost);
+if(cost < 40){
+   cost += 10;
+}
+// const store=cost;
+// console.log(cost);
+document.querySelector('.display')
+.innerHTML=`$${cost}`;
+
+        }
+    </script>
+</body>
+</html>
